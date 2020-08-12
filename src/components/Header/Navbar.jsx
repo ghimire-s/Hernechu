@@ -7,38 +7,34 @@ export default class Navbar extends Component {
   render() {
     return (
       <React.Fragment>
-        <div className="container-fluid">
-          <div className="row">
-            <div className="col-sm-4">
-              <ul className="navbar-nav align-items-center">
-                <li className="nav-item ml-5">
-                  <Link to="/" className="nav-link">
-                    Home
-                  </Link>
-                </li>
-                <li className="nav-item ml-5">
-                  <Link to="/Movies" className="nav-link">
-                    Movies
-                  </Link>
-                </li>
-                <li className="nav-item ml-5">
-                  <Link to="/Trailers" className="nav-link">
-                    Trailers
-                  </Link>
-                </li>
-                <li className="nav-item ml-5">
-                  <Link to="/Songs" className="nav-link">
-                    Songs
-                  </Link>
-                </li>
-                <li className="nav-item ml-5">
-                  <Link to="/About" className="nav-link">
-                    About
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </div>
+        <div className="collapse navbar-collapse" id="navbarCollapse">
+          <ul className="navbar-nav mr-auto">
+            <li className="nav-item">
+              <Link to="/" className="nav-link">
+                Home
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/Movies" className="nav-link">
+                Movies
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/Trailers" className="nav-link">
+                Trailers
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/Songs" className="nav-link">
+                Songs
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/About" className="nav-link">
+                About
+              </Link>
+            </li>
+          </ul>
         </div>
       </React.Fragment>
     );

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-export default class Movie extends Component {
+export default class MovieIndividual extends Component {
   render() {
     return (
       <div>

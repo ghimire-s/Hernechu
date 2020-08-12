@@ -3,6 +3,8 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import Header from "./components/Header/Header";
+import Body from "./components/Body/Body";
+import { BrowserRouter as Router } from "react-router-dom";
 
 export default class App extends Component {
   constructor() {
@@ -14,9 +16,12 @@ export default class App extends Component {
   render() {
     return (
       <React.Fragment>
-        <div className="row">
-          <Header appName={this.state.appName} />
-        </div>
+        <Router>
+          <div className="row">
+            <Header appName={this.state.appName} />
+            <Body></Body>
+          </div>
+        </Router>
       </React.Fragment>
     );
   }
