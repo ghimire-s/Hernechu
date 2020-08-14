@@ -11,7 +11,7 @@ class Home extends Component {
         return (
             <div>
                 <h1>Home</h1>
-                <div className="tile-container">
+                {/* <div className="tile-container">
                     <Carrousal
                         className="carrousal"
                         title="Movies"
@@ -30,7 +30,7 @@ class Home extends Component {
                         data={this.props.movies}
                         key="3"
                     ></Carrousal>
-                </div>
+                </div> */}
             </div>
         )
     }
