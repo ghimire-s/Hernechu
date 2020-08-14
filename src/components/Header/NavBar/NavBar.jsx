@@ -24,6 +24,7 @@ const useStyles = makeStyles((theme) => ({
 
 const NavBar = (props) => {
     const { history } = props;
+    console.log(history)
     const theme = useTheme();
     const classes = useStyles();
     const [anchorEl, setAnchorEl] = React.useState(null);
