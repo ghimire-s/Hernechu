@@ -11,22 +11,26 @@ import { withRouter } from 'react-router-dom';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 const useStyles = makeStyles((theme) => ({
-    root: {
-        flexGrow: 1,
-    },
     menuButton: {
         marginRight: theme.spacing(2),
-    },
-    title: {
-        flexGrow: 1,
-    },
+    }
 }));
 
 const NavBar = (props) => {
-    const { history } = props;
-    console.log(history)
-    const theme = useTheme();
+    const { navItem } = props;
     const classes = useStyles();
+    const mobileMenuItem = navItem.map((item) => (
+        <MenuItem onClick={() => handleMenuClick(item === 'Home' ? `/` : `/${item}`)} key={item}>{item}</MenuItem>
+    ))
+    const nonMobileMenuItem = navItem.map((item) => (
+        <Button variant="contained" className={classes.menuButton} onClick={() => handleMenuClick(item === 'Home' ? `/` : `/${item}`)} key={item}>
+            <Typography>
+                {item}
+            </Typography>
+        </Button>
+    ))
+    const { history } = props;
+    const theme = useTheme();
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
     const isMobile = useMediaQuery(theme.breakpoints.down('xs'));
@@ -67,14 +71,12 @@ const NavBar = (props) => {
                     open={open}
                     onClose={() => setAnchorEl(null)}
                 >
-                    <MenuItem onClick={() => handleMenuClick('/')}>Home</MenuItem>
-                    <MenuItem onClick={() => handleMenuClick('/Songs')}>Songs</MenuItem>
-                    <MenuItem onClick={() => handleMenuClick('/Trailers')}>Trailers</MenuItem>
-                    <MenuItem onClick={() => handleMenuClick('/About')}>About</MenuItem>
+                    {mobileMenuItem}
                 </Menu></>)
                 :
                 (<>
-                    <Button variant="contained" className={classes.menuButton} onClick={() => handleMenuClick('/')}>
+                    {nonMobileMenuItem}
+                    {/* <Button variant="contained" className={classes.menuButton} onClick={() => handleMenuClick('/')}>
                         <Typography>
                             Home
                                </Typography>
@@ -93,7 +95,7 @@ const NavBar = (props) => {
                         <Typography>
                             About
                        </Typography>
-                    </Button>
+                    </Button> */}
                 </>)
             }
 
