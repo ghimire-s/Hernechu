@@ -1,14 +1,16 @@
-import React from 'react'
-import { Provider } from 'react-redux';
+
+// stories/Provider.js
+import React from 'react';
+const Provider = require('react-redux').Provider;
+
 import store from '../src/store';
 
-function WithProvider(props) {
+
+
+export default function MyProvider({ story }) {
     return (
         <Provider store={store}>
-            <div>{props}</div>
-
+            {story}
         </Provider>
-    )
-}
-
-export default WithProvider;
+    );
+};

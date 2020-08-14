@@ -1,6 +1,11 @@
 .carr {
+    position: relative;
     display: flex;
     flex-direction: row;
+}
+
+.Slider {
+    height: 100px;
 }
 
 .Slider-title {

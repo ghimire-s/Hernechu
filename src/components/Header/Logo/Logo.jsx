@@ -1,21 +1,32 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { getWebsiteName } from '../../../actions/websiteAction'
+import React from 'react';
+import './Logo.css';
+import { Typography } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
 
-class Logo extends Component {
-    componentDidMount() {
-        this.props.getWebsiteName();
-    }
-    render() {
-        return (
-            <div>
-                {this.props.logo}
-            </div>
-        )
-    }
+
+const useStyles = makeStyles((theme) => ({
+    root: {
+        flexGrow: 1,
+    },
+    menuButton: {
+        marginRight: theme.spacing(2),
+    },
+    title: {
+        flexGrow: 1,
+    },
+}));
+
+const Logo = (props) => {
+    const classes = useStyles();
+    return (
+        <Typography variant="h6" className={classes.title}>
+            {props.websiteName}
+        </Typography>
+    )
+
 }
-const mapStateToProps = state => ({
-    logo: state.website.websiteName
-});
 
-export default connect(mapStateToProps, { getWebsiteName })(Logo)
+Logo.defaultProps = {
+    websiteName: "Hernucha"
+};
+export default Logo;

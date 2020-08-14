@@ -1,9 +1,5 @@
 .navBar ul {
-    display: flex;
-    align-items: center;
     list-style-type: none;
-    justify-content: flex-end;
-    position: relative;
 
 }
 
