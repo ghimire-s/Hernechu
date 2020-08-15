@@ -7,6 +7,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import { makeStyles, ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import purple from '@material-ui/core/colors/purple';
 import green from '@material-ui/core/colors/green';
+import Footer from './components/Footer/Footer'
 
 import { Grid, Paper } from '@material-ui/core';
 
@@ -56,9 +57,7 @@ function App() {
           </Grid>
         </ Router>
         <Grid item xs={12}>
-          <footer>
-            THis is footer
-        </footer>
+          <Footer />
         </Grid>
       </ThemeProvider>
     </Provider>

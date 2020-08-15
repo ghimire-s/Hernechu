@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
 import { fetchMovies } from '../../actions/movieAction';
-import Carrousal from '../Carrousal/Carrousal'
+import Carousel from '../Carousel/Carousel'
 
 class Home extends Component {
     componentDidMount(e) {
@@ -11,26 +11,7 @@ class Home extends Component {
         return (
             <div>
                 <h1>Home</h1>
-                {/* <div className="tile-container">
-                    <Carrousal
-                        className="carrousal"
-                        title="Movies"
-                        data={this.props.movies}
-                        key="1"
-                    ></Carrousal>
-                    <Carrousal
-                        className="carrousal"
-                        title="Songs"
-                        data={this.props.movies}
-                        key="2"
-                    ></Carrousal>
-                    <Carrousal
-                        className="carrousal"
-                        title="Trailers"
-                        data={this.props.movies}
-                        key="3"
-                    ></Carrousal>
-                </div> */}
+                <Carousel />
             </div>
         )
     }
