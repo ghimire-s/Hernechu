@@ -76,26 +76,7 @@ const NavBar = (props) => {
                 :
                 (<>
                     {nonMobileMenuItem}
-                    {/* <Button variant="contained" className={classes.menuButton} onClick={() => handleMenuClick('/')}>
-                        <Typography>
-                            Home
-                               </Typography>
-                    </Button>
-                    <Button variant="contained" className={classes.menuButton} onClick={() => handleMenuClick('/Trailers')}>
-                        <Typography>
-                            Trailers
-                               </Typography>
-                    </Button>
-                    <Button variant="contained" className={classes.menuButton} onClick={() => handleMenuClick('/Songs')}>
-                        <Typography>
-                            Songs
-                           </Typography>
-                    </Button>
-                    <Button variant="contained" className={classes.menuButton} onClick={() => handleMenuClick('/About')}>
-                        <Typography>
-                            About
-                       </Typography>
-                    </Button> */}
+
                 </>)
             }
 

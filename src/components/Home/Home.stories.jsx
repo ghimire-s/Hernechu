@@ -1,7 +1,7 @@
 import React from 'react';
 import Home from './Home';
 import store from '../../store';
-import { Provider } from 'react-redux'
+import { Provider } from 'react-redux';
 
 
 export default {
@@ -10,3 +10,4 @@ export default {
 };
 
 export const Default = () => <Provider store={store}><Home /></Provider>
+export const test = () => <Provider store={store}><Home /></Provider>
