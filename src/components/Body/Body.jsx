@@ -1,20 +1,20 @@
 
 import React, { Component } from 'react'
 import { Switch, Route } from 'react-router-dom';
-import { makeStyles } from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 import About from "../About/About";
 import Home from "../Home/Home";
 import Songs from "../Songs/Songs";
 import Trailers from '../Trailers/Trailers';
 
-const useStyles = makeStyles(() => ({
+const useStyles = theme => ({
     root: {
         minHeight: '100%'
     }
-}));
+});
 
 
-export default class Body extends Component {
+class Body extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -23,7 +23,7 @@ export default class Body extends Component {
     }
 
     render() {
-        const classes = useStyles();
+        const { classes, theme } = this.props
         return (
             <div className={classes.root}>
                 <Switch>
@@ -46,7 +46,7 @@ export default class Body extends Component {
 }
 
 
-
+export default withStyles(useStyles, { withTheme: true })(Body)
 
 
 
