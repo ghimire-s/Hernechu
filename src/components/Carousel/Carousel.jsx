@@ -38,17 +38,18 @@ const Carousel = () => {
     return (
         <div className={classes.root}>
             <GridList className={classes.gridList} cols={2.5}>
-                {data.map((tile) => (
-                    <>
-                        <Box m="2rem" />
+                {data.map((tile, index) => (
+                    <div key={`top${index}`}>
+                        <Box m="2rem" key={`first${index}`} />
                         <Box
+                            key={`second${index}`}
                             elevation={3}
                             boxShadow={10}
 
                         >
-                            <img style={{ borderRadius: "10px" }} src={tile.image} alt={tile.name} className={classes.image} />
+                            <img style={{ borderRadius: "10px" }} src={tile.image} alt={tile.name} className={classes.image} key={index} />
                         </Box>
-                    </>
+                    </div>
                 ))}
             </GridList>
         </div>

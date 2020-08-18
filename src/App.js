@@ -5,37 +5,65 @@ import Body from './components/Body/Body';
 import Header from './components/Header/Header';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { makeStyles, ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
-import purple from '@material-ui/core/colors/purple';
-import green from '@material-ui/core/colors/green';
 import Footer from './components/Footer/Footer'
 
-import { Grid, Paper } from '@material-ui/core';
+import { Grid } from '@material-ui/core';
 
 import store from './store';
 import './App.css';
 
 const theme = createMuiTheme({
   palette: {
+    common: {
+      black: "#000",
+      white: "#fff"
+    },
+    background: {
+      paper: "#fff",
+      default: "#fafafa"
+    },
     primary: {
-      main: purple[500],
+      light: "#7986cb",
+      main: "rgba(74, 144, 226, 1)",
+      dark: "rgba(29, 29, 32, 1)",
+      contrastText: "#fff"
     },
     secondary: {
-      main: green[500],
+      light: "#ff4081",
+      main: "rgba(80, 227, 194, 1)",
+      dark: "#c51162",
+      contrastText: "#fff"
     },
-  },
-});
+    error: {
+      light: "#e57373",
+      main: "#f44336",
+      dark: "#d32f2f",
+      contrastText: "#fff"
+    },
+    text: {
+      primary: "rgba(0, 0, 0, 1)",
+      secondary: "rgba(0, 0, 0, 0.54)",
+      disabled: "rgba(0, 0, 0, 0.38)",
+      hint: "rgba(0, 0, 0, 0.38)"
+    }
+  }
+})
+// const theme = createMuiTheme({
+//   palette: {
+//     primary: {
+//       main: deepOrange['A200'],
+//     },
+//     secondary: {
+//       main: green[500],
+//     },
+//   },
+// });
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   grid: {
     width: '100%',
     margin: '0px'
 
-  },
-  paper: {
-    padding: theme.spacing(2),
-    textAlign: 'center',
-    color: theme.palette.text.secondary,
-    background: theme.palette.success.light,
   }
 }));
 
@@ -48,7 +76,7 @@ function App() {
         < Router>
           <Grid container spacing={2} className={classes.grid}>
             <Grid item xs={12}>
-              <Paper className={classes.paper}><Header /></Paper>
+              <Header />
             </Grid>
             <Grid item xs={12}>
               <Body />
