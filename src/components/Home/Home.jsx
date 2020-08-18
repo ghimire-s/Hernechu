@@ -4,7 +4,7 @@ import { fetchMovies } from '../../actions/movieAction';
 import Carousel from '../Carousel/Carousel'
 
 class Home extends Component {
-    componentDidMount(e) {
+    componentDidMount() {
         this.props.fetchMovies();
     }
     render() {
