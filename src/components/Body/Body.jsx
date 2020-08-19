@@ -7,7 +7,7 @@ import Home from "../Home/Home";
 import Songs from "../Songs/Songs";
 import Trailers from '../Trailers/Trailers';
 
-const useStyles = theme => ({
+const useStyles = () => ({
     root: {
         minHeight: '100%'
     }
