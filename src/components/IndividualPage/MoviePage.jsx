@@ -1,12 +1,16 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Grid } from '@material-ui/core';
 
-export default class MoviePage extends Component {
-    render() {
-        return (
-            <Grid container spacing={2}>
 
-            </Grid>
-        )
-    }
+
+const MoviePage = () => {
+
+    return (
+        <Grid container spacing={2}>
+
+        </Grid>
+    )
 }
+
+
+export default MoviePage;

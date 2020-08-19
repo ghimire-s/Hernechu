@@ -2,7 +2,7 @@ import React from 'react';
 import MoviePage from './MoviePage';
 
 export default {
-    title: 'Sections/MoviePage',
+    title: 'Movies/MoviePage',
     component: MoviePage
 }
 
