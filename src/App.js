@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { Provider } from 'react-redux';
 import Body from './components/Body/Body';
 import Header from './components/Header/Header';
@@ -10,7 +9,6 @@ import Footer from './components/Footer/Footer'
 import { Grid } from '@material-ui/core';
 
 import store from './store';
-import './App.css';
 
 const theme = createMuiTheme({
   palette: {
@@ -48,16 +46,7 @@ const theme = createMuiTheme({
     }
   }
 })
-// const theme = createMuiTheme({
-//   palette: {
-//     primary: {
-//       main: deepOrange['A200'],
-//     },
-//     secondary: {
-//       main: green[500],
-//     },
-//   },
-// });
+
 
 const useStyles = makeStyles(() => ({
   grid: {
