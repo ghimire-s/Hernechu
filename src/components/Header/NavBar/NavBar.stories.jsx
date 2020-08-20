@@ -9,8 +9,5 @@ export default {
     component: NavBar,
 };
 
-
-
-
 export const Default = () => <Router><NavBar /></Router>
 export const EditableNavItem = (args) => <Router><NavBar {...args} /></Router>

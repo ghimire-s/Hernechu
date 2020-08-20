@@ -10,3 +10,4 @@ export default {
 };
 
 export const primary = () => <Logo websiteName="Hernucha" />
+export const editable = (args) => <Logo websiteName="Hernucha" {...args} />

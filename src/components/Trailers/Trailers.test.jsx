@@ -8,4 +8,9 @@ describe("Trailers", () => {
     it("should render Trailers", () => {
         const wrapper = shallow(<Trailers />)
     })
+    it("should render Trailers", () => {
+        const wrapper = shallow(<Trailers />)
+        const text = <div><h1>Trailers</h1></div>
+        expect(wrapper.contains(text)).toEqual(true)
+    })
 })

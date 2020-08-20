@@ -61,7 +61,6 @@ function App() {
   return (
     <Provider store={store}>
       <ThemeProvider theme={theme}>
-
         < Router>
           <Grid container spacing={2} className={classes.grid}>
             <Grid item xs={12}>

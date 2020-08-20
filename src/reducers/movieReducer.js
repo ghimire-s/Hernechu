@@ -4,6 +4,7 @@ const initalstate = {
     items: [],
     item: []
 }
+
 const movies = (state = initalstate, action) => {
     switch (action.type) {
         case FETCH_MOVIES:

@@ -6,6 +6,6 @@ import Logo from './Logo'
 Enzyme.configure({ adapter: new Adapter() });
 describe("Logo", () => {
     it("should render Logo", () => {
-        const wrapper = shallow(<Logo />)
+        const wrapper = shallow(<Logo websiteName={'Hernucha'} />)
     })
 })

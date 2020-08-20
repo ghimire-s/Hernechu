@@ -1,17 +1,35 @@
-import React, { Component } from "react";
-import "./card.css";
+import React from "react";
+import data from '../../data.json';
+import Card from '@material-ui/core/Card';
+import CardMedia from '@material-ui/core/CardMedia';
+import { makeStyles } from '@material-ui/core/styles'
 
-export default class Card extends Component {
-    render() {
-        return (
-            <div className="movieCard">
-                <div className="movieImage">
-                    <img className="movieImage" src={this.props.movieImage} alt={this.props.movieName}></img>
-                </div>
-                <div>
-                    <h5>{this.props.movieName}</h5>
-                </div>
-            </div>
-        )
-    }
+const useStyles = makeStyles((theme) => ({
+    root: {
+        display: 'flex',
+        justifyContent: 'space-around',
+        overflow: 'hidden',
+        // backgroundColor: theme.palette.background.paper,
+        borderRadius: '20px'
+
+    },
+
+}));
+const MyCard = () => {
+    const classes = useStyles();
+    return (
+        <div className={classes.root}>
+            <Card>
+                <CardMedia
+                    component="img"
+                    image={data[0].image}
+                    title="Live from space album cover"
+                >
+                </CardMedia>
+            </Card>
+        </div>
+    )
 }
+
+export default MyCard;
+

@@ -17,7 +17,7 @@ const Header = () => {
     const classes = useStyles();
     return (
         <div className={classes.root}>
-            <AppBar position="static">
+            <AppBar position="static" >
                 <Toolbar>
                     <Logo websiteName={webSiteName} />
                     <NavBar navItem={navBar} />
