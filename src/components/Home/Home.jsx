@@ -36,7 +36,7 @@ class Home extends Component {
                                     <ButtonGroup key={`group${item}`} className={classes.button} color="primary" aria-label="outlined primary button group">
                                         <Button key={`1${item}`}>Youtube</Button>
                                         <Button key={`2${item}`}>Theaters</Button>
-                                        <Button key={`3${item}`}>Site</Button>
+                                        <Button key={`3${item}`}>Streaming</Button>
                                     </ButtonGroup>
                                 </ListItem>
                             </Grid>
