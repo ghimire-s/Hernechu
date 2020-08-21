@@ -24,7 +24,6 @@ describe("MoviePage", () => {
         const grid = <Typography>
             This is Not a movie
             </Typography>
-
         expect(wrapper.contains(grid)).toEqual(false);
     })
 });

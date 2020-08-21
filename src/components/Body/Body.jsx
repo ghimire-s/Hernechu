@@ -9,7 +9,7 @@ import Trailers from '../Trailers/Trailers';
 
 const useStyles = () => ({
     root: {
-        minHeight: '100%'
+        minHeight: '100%',
     }
 });
 
