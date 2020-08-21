@@ -29,18 +29,18 @@ class Home extends Component {
             <div>
                 <Grid container>
                     {['Movies', 'Songs', 'Trailers'].map((item) => (
-                        <div key={item} className={classes.row}>
-                            <Grid item xs={12} key={item}>
-                                <ListItem key={item}>
-                                    <Typography variant="h4" key={item}>{item}</Typography>
-                                    <ButtonGroup key={item} className={classes.button} color="primary" aria-label="outlined primary button group">
-                                        <Button key={`1+{$item}`}>Youtube</Button>
-                                        <Button key={`2+{$item}`}>Theaters</Button>
-                                        <Button key={`3+{$item}`}>Site</Button>
+                        <div key={`main${item}`} className={classes.row}>
+                            <Grid item xs={12} key={`gridMain${item}`}>
+                                <ListItem key={`listItem${item}`}>
+                                    <Typography variant="h4" key={`typography${item}`}>{item}</Typography>
+                                    <ButtonGroup key={`group${item}`} className={classes.button} color="primary" aria-label="outlined primary button group">
+                                        <Button key={`1${item}`}>Youtube</Button>
+                                        <Button key={`2${item}`}>Theaters</Button>
+                                        <Button key={`3${item}`}>Site</Button>
                                     </ButtonGroup>
                                 </ListItem>
                             </Grid>
-                            <div className={classes.carrousel} key={item}>
+                            <div className={classes.carrousel} key={`carousel${item}`}>
                                 <Carousel />
                             </div>
                         </div>
