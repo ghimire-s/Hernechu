@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { withStyles } from '@material-ui/core/styles';
+import React, { useState } from 'react';
+import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import data from '../../data.json';
 import MyCard from '../Card/Card';
@@ -7,7 +7,9 @@ import { IconButton, GridList, GridListTile, ListItem } from '@material-ui/core'
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 
-const useStyles = (theme) => ({
+
+
+const useStyles = makeStyles((theme) => ({
     root: {
         display: 'flex',
         flexWrap: 'wrap',
@@ -30,57 +32,61 @@ const useStyles = (theme) => ({
         width: '13%'
     }
 
-});
+}));
 
-class Carousel extends Component {
-    constructor(props) {
-        super(props);
-        this.movieScrollBox = React.createRef();
-        this.state = {
-            displayIndividual: false
-        };
-        this.scrollRight = this.scrollRight.bind(this);
-        this.scrollLeft = this.scrollLeft.bind(this);
-    }
-    scrollRight() {
-        this.movieScrollBox.current.scrollLeft += 200;
-    }
-    scrollLeft() {
-        this.movieScrollBox.current.scrollLeft -= 200;
-    }
-    render() {
-        const { classes } = this.props
-        console.log(this.props)
-        return (
-            <div className={classes.root}>
-                <ListItem>
-                    <IconButton size="medium" onClick={this.scrollLeft}>
-                        <ArrowBackIosIcon fontSize="large" />
-                    </IconButton>
-                    <GridList className={classes.gridList} cellHeight={350} cols={6.5} ref={this.movieScrollBox}>
-                        {data.map((tile) => (
-                            <GridListTile key={tile.name} >
+const Carousel = () => {
+    const classes = useStyles();
+    const movieScrollBox = React.useRef();
+    let [leftArrow, setleftArrow] = useState(false);
+    let [rightArrow, setRightArrow] = useState(true);
 
-                                <MyCard
-                                    key={tile.image}
-                                    image={tile.image}
-                                />
-                                <Typography
-                                    key={tile.name}
-                                    className={classes.title}
-                                >
-                                    {tile.name}
-                                </Typography>
-                            </GridListTile>
-                        ))}
-                    </GridList>
-                    <IconButton size="medium" variant="outlined" onClick={this.scrollRight}>
-                        <ArrowForwardIosIcon fontSize="large" />
-                    </IconButton>
-                </ListItem>
-            </div >
-        );
+    const scrollRight = () => {
+        movieScrollBox.current.scrollLeft += 200;
+        setleftArrow(true)
+        if (movieScrollBox.current.scrollLeft === movieScrollBox.current.scrollLeftMax) {
+            setRightArrow(false)
+        }
     }
+    const scrollLeft = () => {
+        movieScrollBox.current.scrollLeft -= 200;
+        if (movieScrollBox.current.scrollLeft === 0) {
+            setleftArrow(false)
+        }
+        setRightArrow(true)
+    }
+
+    const arrowBack = <IconButton size="medium" onClick={scrollLeft}>
+        <ArrowBackIosIcon fontSize="large" />
+    </IconButton>
+    const arrowForward = <IconButton size="medium" variant="outlined" onClick={scrollRight}>
+        <ArrowForwardIosIcon fontSize="large" />
+    </IconButton>
+    return (
+        <div className={classes.root}>
+            <ListItem>
+                {leftArrow ? arrowBack : <div />}
+                <GridList className={classes.gridList} cellHeight={350} cols={6.5} ref={movieScrollBox}>
+                    {data.map((tile) => (
+                        <GridListTile key={tile.name} >
+
+                            <MyCard
+                                key={tile.image}
+                                image={tile.image}
+                            />
+                            <Typography
+                                key={tile.name}
+                                className={classes.title}
+                            >
+                                {tile.name}
+                            </Typography>
+                        </GridListTile>
+                    ))}
+                </GridList>
+                {rightArrow ? arrowForward : <div />}
+            </ListItem>
+        </div >
+    );
 }
 
-export default withStyles(useStyles, { withTheme: true })(Carousel)
+
+export default Carousel
