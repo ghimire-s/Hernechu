@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, useTheme } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import data from '../../data.json';
 import MyCard from '../Card/Card';
 import { IconButton, GridList, GridListTile, ListItem } from '@material-ui/core';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 
 
@@ -27,8 +28,14 @@ const useStyles = makeStyles((theme) => ({
         color: theme.palette.text.primary,
         textAlign: 'center',
         paddingTop: '4px',
+        [theme.breakpoints.down('xs')]: {
+            paddingRight: '12px'
+        }
     },
     tile: {
+        [theme.breakpoints.down('xs')]: {
+            width: '20%',
+        },
         width: '13%'
     }
 
@@ -39,7 +46,9 @@ const Carousel = () => {
     const movieScrollBox = React.useRef();
     let [leftArrow, setleftArrow] = useState(false);
     let [rightArrow, setRightArrow] = useState(true);
-
+    const theme = useTheme();
+    const smallScreen = useMediaQuery(theme.breakpoints.down('md'));
+    const mobileScreen = useMediaQuery(theme.breakpoints.down('xs'));
     const scrollRight = () => {
         movieScrollBox.current.scrollLeft += 200;
         setleftArrow(true)
@@ -55,17 +64,17 @@ const Carousel = () => {
         setRightArrow(true)
     }
 
-    const arrowBack = <IconButton size="medium" onClick={scrollLeft}>
-        <ArrowBackIosIcon fontSize="large" />
+    const arrowBack = <IconButton size={smallScreen ? "small" : "medium"} onClick={scrollLeft}>
+        <ArrowBackIosIcon fontSize={smallScreen ? "small" : "large"} />
     </IconButton>
-    const arrowForward = <IconButton size="medium" variant="outlined" onClick={scrollRight}>
-        <ArrowForwardIosIcon fontSize="large" />
+    const arrowForward = <IconButton size={smallScreen ? "small" : "medium"} variant="outlined" onClick={scrollRight}>
+        <ArrowForwardIosIcon fontSize={smallScreen ? "small" : "large"} />
     </IconButton>
     return (
         <div className={classes.root}>
             <ListItem>
-                {leftArrow ? arrowBack : <div />}
-                <GridList className={classes.gridList} cellHeight={350} cols={6.5} ref={movieScrollBox}>
+                {smallScreen ? <div></div> : leftArrow ? arrowBack : <div />}
+                <GridList className={classes.gridList} cellHeight={mobileScreen ? 200 : 350} cols={smallScreen ? 2.5 : 6.5} ref={movieScrollBox}>
                     {data.map((tile) => (
                         <GridListTile key={tile.name} >
 
@@ -82,7 +91,7 @@ const Carousel = () => {
                         </GridListTile>
                     ))}
                 </GridList>
-                {rightArrow ? arrowForward : <div />}
+                {smallScreen ? <div></div> : rightArrow ? arrowForward : <div />}
             </ListItem>
         </div >
     );

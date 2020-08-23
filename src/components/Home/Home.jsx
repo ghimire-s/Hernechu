@@ -2,20 +2,18 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux';
 import { fetchMovies } from '../../actions/movieAction';
 import Carousel from '../Carousel/Carousel';
-import Button from '@material-ui/core/Button';
-import ButtonGroup from '@material-ui/core/ButtonGroup';
+import MyButtonGroup from './ButtonGroup/ButtonGroup';
 import { withStyles } from '@material-ui/core/styles';
-import { Typography, Grid, ListItem } from '@material-ui/core';
+import { Grid, ListItem } from '@material-ui/core';
+import Title from './Title'
 
 const useStyles = (theme) => ({
-    button: {
-        paddingLeft: theme.spacing(3)
-    },
     carrousel: {
         paddingTop: theme.spacing(3)
     },
     row: {
-        marginTop: theme.spacing(3)
+        marginTop: theme.spacing(3),
+        overflow: 'hidden',
     }
 
 });
@@ -32,12 +30,8 @@ class Home extends Component {
                         <div key={`main${item}`} className={classes.row}>
                             <Grid item xs={12} key={`gridMain${item}`}>
                                 <ListItem key={`listItem${item}`}>
-                                    <Typography variant="h4" key={`typography${item}`}>{item}</Typography>
-                                    <ButtonGroup key={`group${item}`} className={classes.button} color="primary" aria-label="outlined primary button group">
-                                        <Button key={`1${item}`}>Youtube</Button>
-                                        <Button key={`2${item}`}>Theaters</Button>
-                                        <Button key={`3${item}`}>Streaming</Button>
-                                    </ButtonGroup>
+                                    <Title item={item} />
+                                    <MyButtonGroup item={item} />
                                 </ListItem>
                             </Grid>
                             <div className={classes.carrousel} key={`carousel${item}`}>
