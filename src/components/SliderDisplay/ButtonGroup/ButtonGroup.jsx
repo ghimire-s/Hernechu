@@ -1,10 +1,7 @@
 import React from 'react';
 import ToggleButton from '@material-ui/lab/ToggleButton';
 import ToggleButtonGroup from '@material-ui/lab/ToggleButtonGroup';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
-import useMediaQuery from '@material-ui/core/useMediaQuery';
-import ButtonGroupMobile from '../ButtonGroupMobile/ButtonGroupMobile';
-
+import { makeStyles } from '@material-ui/core/styles';
 
 
 const useStyle = makeStyles((theme) => ({
@@ -35,8 +32,6 @@ const StyledButton = makeStyles((theme) => ({
 }));
 
 const MyButtonGroup = (props) => {
-    const theme = useTheme();
-    const smallScreen = useMediaQuery(theme.breakpoints.down('xs'));
     const classes = useStyle();
     const cla = StyledButton();
     const [alignment, setAlignment] = React.useState('');
@@ -44,26 +39,23 @@ const MyButtonGroup = (props) => {
         setAlignment(newAlignment);
         props.selection(newAlignment)
     };
-    const regular =
-        <ToggleButtonGroup
-            value={alignment}
-            exclusive
-            onChange={handleAlignment}
-            aria-label="movies showcase"
-            className={classes.button}
-        >
-            {
-                props.button.map((item) => (
-                    <ToggleButton value={item} key={item} aria-label={item} className={cla.root} >
-                        {item}
-                    </ToggleButton>
-                ))
-            };
-        </ToggleButtonGroup >
-    const mobile = <ButtonGroupMobile key={`mobile${props.item}`} clickSelection={props.selection} />
     return (
         <div>
-            {smallScreen ? mobile : regular}
+            <ToggleButtonGroup
+                value={alignment}
+                exclusive
+                onChange={handleAlignment}
+                aria-label="movies showcase"
+                className={classes.button}
+            >
+                {
+                    props.button.map((item) => (
+                        <ToggleButton value={item} key={item} aria-label={item} className={cla.root} >
+                            {item}
+                        </ToggleButton>
+                    ))
+                };
+        </ToggleButtonGroup >
         </div>
     )
 }

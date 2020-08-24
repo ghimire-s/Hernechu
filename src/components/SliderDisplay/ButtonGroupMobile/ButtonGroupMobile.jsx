@@ -46,7 +46,7 @@ const ButtonGroupMobile = (props) => {
     };
 
     return (
-        <Grid container direction="column" alignItems="center" className={classes.button}>
+        <Grid container direction="column" alignItems="flex-start" className={classes.button}>
             <Grid item xs={12}>
                 <ButtonGroup variant="contained" color="primary" ref={anchorRef} aria-label="split button">
                     <Button onClick={handleClick}>{props.options[selectedIndex]}</Button>
