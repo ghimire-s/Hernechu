@@ -1,5 +1,11 @@
-import { NAV_BAR, WEBSITE } from './types';
-import { navBar, webSiteName } from '../website';
+import {
+    NAV_BAR,
+    WEBSITE
+} from './types';
+import {
+    navBar,
+    webSiteName
+} from '../website';
 
 const nav = navBar;
 const web = webSiteName;

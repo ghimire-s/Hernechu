@@ -23,7 +23,7 @@ const useStyle = makeStyles((theme) => ({
 
 const Footer = () => {
     const theme = useTheme();
-    const smallScreen = useMediaQuery(theme.breakpoints.down('md'));
+    const smallScreen = useMediaQuery(theme.breakpoints.down('lg'));
     const classes = useStyle();
     return (
         <div className={classes.root}>

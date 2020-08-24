@@ -1,19 +1,18 @@
-[
-    {
+[{
         "name": "Karkhana",
         "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/7w1QEDSLMmAgxQNQ1WlvLZADp3N.jpg",
         "year": "2017",
         "length": "2h 18m",
+        "youtube": "https://www.youtube.com/watch?v=I_N5CKgs6_k",
         "genre": [
             "drama"
         ],
         "rating": "PG-13",
-        "actor": [
-            {
+        "actor": [{
                 "name": "Sushil Shrestha",
                 "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/dxScpyK7aGgIrOgopJn9M5ShzTr.jpg"
             },
-            {                   
+            {
                 "name": "Rabindra Singh Baniya",
                 "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/6mCNFvFRBJkSLzVOlrtYLFfhKAW.jpg"
             },
@@ -38,11 +37,9 @@
                 "image": "https://image.tmdb.org/t/p/original/ySK3NIzPYA4aYsGhPd17me29TsJ.jpg"
             }
         ],
-        "streaming": [
-            {
-                "youtube": "https://cdn2.iconfinder.com/data/icons/social-icons-color/512/youtube-512.png"
-            }
-        ],
+        "streaming": [{
+            "youtube": "https://cdn2.iconfinder.com/data/icons/social-icons-color/512/youtube-512.png"
+        }],
         "songs": [
             "Dui Rupaiyaa",
             "Kutu Ma Kutu",
@@ -54,12 +51,12 @@
         "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/9jNJm1zEWXMpdhMTOwbGgiQnOpO.jpg",
         "year": "2016",
         "length": "2h 18m",
+        "youtube": "https://www.youtube.com/watch?v=Hpgp6I-4WJc",
         "genre": [
             "drama"
         ],
         "rating": "PG-13",
-        "actor": [
-            {
+        "actor": [{
                 "name": "Khagendra Lamichhane",
                 "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/n7F46qQ3MB8WoUFajUSrRyIhNlU.jpg"
             },
@@ -88,11 +85,9 @@
                 "image": "https://image.tmdb.org/t/p/original/ySK3NIzPYA4aYsGhPd17me29TsJ.jpg"
             }
         ],
-        "streaming": [
-            {
-                "youtube": "https://cdn2.iconfinder.com/data/icons/social-icons-color/512/youtube-512.png"
-            }
-        ],
+        "streaming": [{
+            "youtube": "https://cdn2.iconfinder.com/data/icons/social-icons-color/512/youtube-512.png"
+        }],
         "songs": [
             "Dui Rupaiyaa",
             "Kutu Ma Kutu",
@@ -104,12 +99,12 @@
         "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/1SFTXzxtNskQphXebQJQeeswLeg.jpg",
         "year": "2014",
         "length": "1h 30m",
+        "youtube": "https://www.youtube.com/watch?v=Zl-JXV0JTzw&t=23s",
         "genre": [
             "drama"
         ],
         "rating": "PG-13",
-        "actor": [
-            {
+        "actor": [{
                 "name": "Reecha Sharma",
                 "image": "https://image.tmdb.org/t/p/original/1f8Y1jAxZdWPPEbfmlrK48iIqFl.jpg"
             },
@@ -138,11 +133,9 @@
                 "image": "https://image.tmdb.org/t/p/original/ySK3NIzPYA4aYsGhPd17me29TsJ.jpg"
             }
         ],
-        "streaming": [
-            {
-                "youtube": "https://cdn2.iconfinder.com/data/icons/social-icons-color/512/youtube-512.png"
-            }
-        ],
+        "streaming": [{
+            "youtube": "https://cdn2.iconfinder.com/data/icons/social-icons-color/512/youtube-512.png"
+        }],
         "songs": [
             "Dui Rupaiyaa",
             "Kutu Ma Kutu",
@@ -154,12 +147,12 @@
         "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/roOpVRDNorjxJTdBTuDBMtI6WVk.jpg",
         "year": "2012",
         "length": "2h 1m",
+        "youtube": "https://www.youtube.com/watch?v=Cz29r8qm07k",
         "genre": [
             "Horror"
         ],
         "rating": "PG-13",
-        "actor": [
-            {
+        "actor": [{
                 "name": "Reecha Sharma",
                 "image": "https://image.tmdb.org/t/p/original/1f8Y1jAxZdWPPEbfmlrK48iIqFl.jpg"
             },
@@ -188,11 +181,9 @@
                 "image": "https://image.tmdb.org/t/p/original/ySK3NIzPYA4aYsGhPd17me29TsJ.jpg"
             }
         ],
-        "streaming": [
-            {
-                "youtube": "https://cdn2.iconfinder.com/data/icons/social-icons-color/512/youtube-512.png"
-            }
-        ],
+        "streaming": [{
+            "youtube": "https://cdn2.iconfinder.com/data/icons/social-icons-color/512/youtube-512.png"
+        }],
         "songs": [
             "Dui Rupaiyaa",
             "Kutu Ma Kutu",
@@ -204,13 +195,13 @@
         "image": "https://image.tmdb.org/t/p/w220_and_h330_face/d9pQHVVf2FbfY6ayPM7qseVLc5K.jpg",
         "year": "2012",
         "length": "2h 1m",
+        "youtube": "",
         "genre": [
             "action",
             "comedy"
         ],
         "rating": "PG-13",
-        "actor": [
-            {
+        "actor": [{
                 "name": "Reecha Sharma",
                 "image": "https://image.tmdb.org/t/p/original/1f8Y1jAxZdWPPEbfmlrK48iIqFl.jpg"
             },
@@ -239,8 +230,7 @@
                 "image": "https://image.tmdb.org/t/p/original/ySK3NIzPYA4aYsGhPd17me29TsJ.jpg"
             }
         ],
-        "streaming": [
-            {
+        "streaming": [{
                 "prime": "https://is3-ssl.mzstatic.com/image/thumb/Purple114/v4/48/27/ad/4827ad2f-084b-2760-3d6d-5b26238decc0/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/1200x630wa.png"
             },
             {
@@ -258,13 +248,13 @@
         "image": "https://image.tmdb.org/t/p/w220_and_h330_face/5XUuWAWwjb4OUgB3r8holAZzc7r.jpg",
         "year": "2016",
         "length": "1h 27m",
+        "youtube": "",
         "genre": [
             "Drama,",
             "Adventure"
         ],
         "rating": "PG-13",
-        "actor": [
-            {
+        "actor": [{
                 "name": "Reecha Sharma",
                 "image": "https://image.tmdb.org/t/p/original/1f8Y1jAxZdWPPEbfmlrK48iIqFl.jpg"
             },
@@ -293,8 +283,7 @@
                 "image": "https://image.tmdb.org/t/p/original/ySK3NIzPYA4aYsGhPd17me29TsJ.jpg"
             }
         ],
-        "streaming": [
-            {
+        "streaming": [{
                 "prime": "https://is3-ssl.mzstatic.com/image/thumb/Purple114/v4/48/27/ad/4827ad2f-084b-2760-3d6d-5b26238decc0/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/1200x630wa.png"
             },
             {
@@ -312,14 +301,14 @@
         "image": "https://image.tmdb.org/t/p/w220_and_h330_face/hLgEKQu34McwUvYIPCZNXQ3cyvm.jpg",
         "year": "2013",
         "length": "2h 18m",
+        "youtube": "",
         "genre": [
             "action",
             "Thriller",
             "Drama"
         ],
         "rating": "PG-13",
-        "actor": [
-            {
+        "actor": [{
                 "name": "Reecha Sharma",
                 "image": "https://image.tmdb.org/t/p/original/1f8Y1jAxZdWPPEbfmlrK48iIqFl.jpg"
             },
@@ -348,8 +337,7 @@
                 "image": "https://image.tmdb.org/t/p/original/ySK3NIzPYA4aYsGhPd17me29TsJ.jpg"
             }
         ],
-        "streaming": [
-            {
+        "streaming": [{
                 "prime": "https://is3-ssl.mzstatic.com/image/thumb/Purple114/v4/48/27/ad/4827ad2f-084b-2760-3d6d-5b26238decc0/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/1200x630wa.png"
             },
             {
@@ -367,13 +355,13 @@
         "image": "https://image.tmdb.org/t/p/w220_and_h330_face/5g3vy1WRKQ1VuMgWO3qZEpjJXyM.jpg",
         "year": "2015",
         "length": "2h 18m",
+        "youtube": "",
         "genre": [
             "action",
             "drama"
         ],
         "rating": "PG-13",
-        "actor": [
-            {
+        "actor": [{
                 "name": "Reecha Sharma",
                 "image": "https://image.tmdb.org/t/p/original/1f8Y1jAxZdWPPEbfmlrK48iIqFl.jpg"
             },
@@ -402,8 +390,7 @@
                 "image": "https://image.tmdb.org/t/p/original/ySK3NIzPYA4aYsGhPd17me29TsJ.jpg"
             }
         ],
-        "streaming": [
-            {
+        "streaming": [{
                 "prime": "https://is3-ssl.mzstatic.com/image/thumb/Purple114/v4/48/27/ad/4827ad2f-084b-2760-3d6d-5b26238decc0/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/1200x630wa.png"
             },
             {
@@ -421,14 +408,14 @@
         "image": "https://image.tmdb.org/t/p/w220_and_h330_face/OaqRENMQ7pz8wmqcm5YJ6aThg9.jpg",
         "year": "1984",
         "length": "2h 18m",
+        "youtube": "",
         "genre": [
             "Drama",
             "comedy",
             "Family"
         ],
         "rating": "PG-13",
-        "actor": [
-            {
+        "actor": [{
                 "name": "Reecha Sharma",
                 "image": "https://image.tmdb.org/t/p/original/1f8Y1jAxZdWPPEbfmlrK48iIqFl.jpg"
             },
@@ -457,8 +444,7 @@
                 "image": "https://image.tmdb.org/t/p/original/ySK3NIzPYA4aYsGhPd17me29TsJ.jpg"
             }
         ],
-        "streaming": [
-            {
+        "streaming": [{
                 "prime": "https://is3-ssl.mzstatic.com/image/thumb/Purple114/v4/48/27/ad/4827ad2f-084b-2760-3d6d-5b26238decc0/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/1200x630wa.png"
             },
             {
@@ -476,13 +462,13 @@
         "image": "https://image.tmdb.org/t/p/w220_and_h330_face/1ENzbTXcJddkjaZ0untVuj7DLta.jpg",
         "year": "2012",
         "length": "2h 1m",
+        "youtube": "",
         "genre": [
             "action",
             "comedy"
         ],
         "rating": "PG-13",
-        "actor": [
-            {
+        "actor": [{
                 "name": "Reecha Sharma",
                 "image": "https://image.tmdb.org/t/p/original/1f8Y1jAxZdWPPEbfmlrK48iIqFl.jpg"
             },
@@ -511,8 +497,7 @@
                 "image": "https://image.tmdb.org/t/p/original/ySK3NIzPYA4aYsGhPd17me29TsJ.jpg"
             }
         ],
-        "streaming": [
-            {
+        "streaming": [{
                 "prime": "https://is3-ssl.mzstatic.com/image/thumb/Purple114/v4/48/27/ad/4827ad2f-084b-2760-3d6d-5b26238decc0/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/1200x630wa.png"
             },
             {

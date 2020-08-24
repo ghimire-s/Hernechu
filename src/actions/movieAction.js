@@ -1,12 +1,15 @@
-import { FETCH_MOVIES, FETCH_MOVIE } from '../actions/types';
+import {
+    FETCH_MOVIES,
+    FETCH_MOVIE
+} from '../actions/types';
 import data from '../data.json';
 
 const ds = data
-
-export const fetchMovies = () => {
+const playing_filter = ds.filter(item => item.youtube !== "")
+export const fetchMovies = (playing) => {
     return {
         type: FETCH_MOVIES,
-        payload: ds
+        payload: playing === 'Youtube' ? playing_filter : ds
     }
 }
 

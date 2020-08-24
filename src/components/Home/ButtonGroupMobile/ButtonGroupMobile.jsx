@@ -22,15 +22,15 @@ const ButtonGroupMobile = (props) => {
     const classes = useStyle();
     const [open, setOpen] = React.useState(false);
     const anchorRef = React.useRef(null);
-    const [selectedIndex, setSelectedIndex] = React.useState(1);
+    const [selectedIndex, setSelectedIndex] = React.useState(0);
 
     const handleClick = () => {
         console.info(`You clicked ${props.options[selectedIndex]}`);
     };
-
     const handleMenuItemClick = (event, index) => {
         setSelectedIndex(index);
         setOpen(false);
+        props.clickSelection(props.options[index])
     };
 
     const handleToggle = () => {
@@ -55,7 +55,7 @@ const ButtonGroupMobile = (props) => {
                         size="small"
                         aria-controls={open ? 'split-button-menu' : undefined}
                         aria-expanded={open ? 'true' : undefined}
-                        aria-label="select merge strategy"
+                        aria-label="select movie viewing"
                         aria-haspopup="menu"
                         onClick={handleToggle}
                     >
@@ -94,7 +94,8 @@ const ButtonGroupMobile = (props) => {
 }
 
 ButtonGroupMobile.defaultProps = {
-    options: ['Youtube', 'Theaters', 'Streaming']
+    clickSelection: () => { },
+    options: ['All', 'Youtube', 'Theaters', 'Streaming']
 }
 
-export default ButtonGroupMobile;
+export default ButtonGroupMobile; 

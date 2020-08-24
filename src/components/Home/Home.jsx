@@ -18,8 +18,22 @@ const useStyles = (theme) => ({
 
 });
 class Home extends Component {
+    constructor(props) {
+        super(props);
+        this.state = { movie_search: 'all', data: [] };
+        this.selectMovieShowing = this.selectMovieShowing.bind(this)
+    }
+
+    selectMovieShowing(item) {
+        this.setState({
+            movie_search: item,
+            data: this.props.fetchMovies(item).payload
+        })
+    }
     componentDidMount() {
-        this.props.fetchMovies();
+        this.setState({
+            data: this.props.fetchMovies(this.state.movie_search).payload
+        })
     }
     render() {
         const { classes } = this.props
@@ -31,11 +45,11 @@ class Home extends Component {
                             <Grid item xs={12} key={`gridMain${item}`}>
                                 <ListItem key={`listItem${item}`}>
                                     <Title item={item} />
-                                    <MyButtonGroup item={item} />
+                                    <MyButtonGroup item={item} selection={this.selectMovieShowing} />
                                 </ListItem>
                             </Grid>
-                            <div className={classes.carrousel} key={`carousel${item}`}>
-                                <Carousel />
+                            <div className={classes.carrousel} key={`carousel${item}`} >
+                                <Carousel data={this.state.data} />
                             </div>
                         </div>
                     ))}

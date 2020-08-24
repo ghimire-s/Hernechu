@@ -7,3 +7,4 @@ export default {
 }
 
 export const Default = () => <ButtonGroupMobile />
+export const EditableValue = (args) => <ButtonGroupMobile {...args} />

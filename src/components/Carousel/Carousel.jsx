@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
-import data from '../../data.json';
+import Skeleton from '@material-ui/lab/Skeleton';
 import MyCard from '../Card/Card';
+import data from '../../data.json';
 import { IconButton, GridList, GridListTile, ListItem } from '@material-ui/core';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 
-
+const das = data
 const useStyles = makeStyles((theme) => ({
     root: {
         display: 'flex',
@@ -41,14 +42,15 @@ const useStyles = makeStyles((theme) => ({
 
 }));
 
-const Carousel = () => {
+const Carousel = (props) => {
     const classes = useStyles();
     const movieScrollBox = React.useRef();
     let [leftArrow, setleftArrow] = useState(false);
     let [rightArrow, setRightArrow] = useState(true);
     const theme = useTheme();
-    const smallScreen = useMediaQuery(theme.breakpoints.down('md'));
+    const smallScreen = useMediaQuery(theme.breakpoints.down('sm'));
     const mobileScreen = useMediaQuery(theme.breakpoints.down('xs'));
+    const largeScreen = useMediaQuery(theme.breakpoints.up('xl'));
     const scrollRight = () => {
         movieScrollBox.current.scrollLeft += 200;
         setleftArrow(true)
@@ -74,8 +76,14 @@ const Carousel = () => {
         <div className={classes.root}>
             <ListItem>
                 {smallScreen ? <div></div> : leftArrow ? arrowBack : <div />}
-                <GridList className={classes.gridList} cellHeight={mobileScreen ? 200 : 350} cols={smallScreen ? 2.5 : 6.5} ref={movieScrollBox}>
-                    {data.map((tile) => (
+                <GridList
+                    spacing={props.data ? 7 : 20}
+                    className={classes.gridList}
+                    cellHeight={smallScreen ? mobileScreen ? 200 : 270 : 350}
+                    cols={smallScreen ? mobileScreen ? 2.5 : 4.5 : props.data.length < 4.5 ? props.data.length : largeScreen ? 8.5 : 5.5}
+                    ref={movieScrollBox}
+                >
+                    {props.data ? props.data.map((tile) => (
                         <GridListTile key={tile.name} >
 
                             <MyCard
@@ -89,13 +97,21 @@ const Carousel = () => {
                                 {tile.name}
                             </Typography>
                         </GridListTile>
-                    ))}
+                    )) : [1, 2, 3].map((tile) => (
+                        <GridListTile key={tile}>
+                            <Skeleton variant="rect" width={200} height={200} key={`skeleton${tile}`} />
+                            <Skeleton animation="wave" key={`wave${tile}`} />
+                        </GridListTile>
+                    ))
+                    }
                 </GridList>
                 {smallScreen ? <div></div> : rightArrow ? arrowForward : <div />}
             </ListItem>
         </div >
     );
 }
-
+Carousel.defaultProps = {
+    data: das
+}
 
 export default Carousel
