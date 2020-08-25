@@ -2,7 +2,7 @@ import React from 'react';
 import ButtonGroupMobile from './ButtonGroupMobile';
 
 export default {
-    title: 'Component/ButtonGroupMobile',
+    title: 'Slider Display/ButtonGroupMobile',
     component: ButtonGroupMobile
 }
 

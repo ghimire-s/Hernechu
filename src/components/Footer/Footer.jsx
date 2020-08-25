@@ -9,7 +9,7 @@ import useMediaQuery from '@material-ui/core/useMediaQuery';
 const useStyle = makeStyles((theme) => ({
     root: {
         color: theme.palette.text.secondary,
-        background: theme.palette.primary.light,
+        background: theme.palette.primary.main,
     },
     name: {
         textAlign: 'center',

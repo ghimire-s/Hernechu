@@ -2,7 +2,7 @@ import React from 'react';
 import MyButtonGroup from './ButtonGroup';
 
 export default {
-    title: 'Component/ButtonGroup',
+    title: 'Slider Display/ButtonGroup',
     component: MyButtonGroup,
 };
 

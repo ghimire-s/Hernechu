@@ -68,7 +68,8 @@ const App = () => {
   const classes = useStyles();
   // const movies = useSelector(state => state.movies.items);
 
-  const selectMovieShowing = (item) => {
+  const selectMovieShowing = (event, item) => {
+    item === 'All' ? setAlignment('') : setAlignment(item);
     setData(dispatch(fetchMovies(item)).payload)
   }
   const individualCard = () => {
@@ -77,11 +78,6 @@ const App = () => {
   const fullDisplay = () => {
     setIndividualState(false)
   }
-  const handleAlignment = (event, newAlignment) => {
-    console.log(newAlignment)
-    setAlignment(newAlignment);
-    selectMovieShowing(newAlignment)
-  };
   return (
     < ThemeProvider theme={theme} >
       <Router >
@@ -96,7 +92,7 @@ const App = () => {
               pickSelection={selectMovieShowing}
               movieData={data}
               selected={alignment}
-              handleAlignment={handleAlignment}
+              handleAlignment={selectMovieShowing}
             />
           </Grid>
         </Grid>

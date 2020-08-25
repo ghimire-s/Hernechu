@@ -6,7 +6,7 @@ import { Provider } from 'react-redux';
 import store from '../../store';
 
 export default {
-    title: 'Page/Body',
+    title: 'Site/Body',
     component: Body,
 }
 
@@ -17,13 +17,13 @@ export const Home = () =>
         </Router>
     </Provider>
 
+
 export const Songs = () =>
     <Router history={createMemoryHistory({ initialEntries: ['/Songs'] })}>
         <Body />
     </Router>
 
 export const Trialers = () =>
-
     <Router history={createMemoryHistory({ initialEntries: ['/Trailers'] })}>
         <Body />
     </Router>
