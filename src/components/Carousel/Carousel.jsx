@@ -66,11 +66,11 @@ const Carousel = (props) => {
         setRightArrow(true)
     }
 
-    const arrowBack = <IconButton size={smallScreen ? "small" : "medium"} onClick={scrollLeft}>
-        <ArrowBackIosIcon fontSize={smallScreen ? "small" : "large"} />
+    const arrowBack = <IconButton size={"medium"} onClick={scrollLeft}>
+        <ArrowBackIosIcon fontSize={"large"} />
     </IconButton>
-    const arrowForward = <IconButton size={smallScreen ? "small" : "medium"} variant="outlined" onClick={scrollRight}>
-        <ArrowForwardIosIcon fontSize={smallScreen ? "small" : "large"} />
+    const arrowForward = <IconButton size={"medium"} variant="outlined" onClick={scrollRight}>
+        <ArrowForwardIosIcon fontSize={"large"} />
     </IconButton>
     return (
         <div className={classes.root}>
@@ -89,6 +89,7 @@ const Carousel = (props) => {
                             <MyCard
                                 key={tile.image}
                                 image={tile.image}
+                                card={props.card}
                             />
                             <Typography
                                 key={tile.name}

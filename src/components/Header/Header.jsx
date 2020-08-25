@@ -13,14 +13,14 @@ const useStyles = makeStyles(() => ({
     }
 }));
 
-const Header = () => {
+const Header = (props) => {
     const classes = useStyles();
     return (
         <div className={classes.root}>
             <AppBar position="static" >
                 <Toolbar>
                     <Logo websiteName={webSiteName} />
-                    <NavBar navItem={navBar} />
+                    <NavBar navItem={navBar} full={props.full} selection={props.selection}/>
                 </Toolbar>
             </AppBar>
         </div>

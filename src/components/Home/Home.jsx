@@ -1,31 +1,26 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
 import { fetchMovies } from '../../actions/movieAction';
+import MoviePage from '../IndividualPage/MoviePage'
 import SliderDisplay from '../SliderDisplay/SliderDisplay'
 
 
 class Home extends Component {
-    constructor(props) {
-        super(props);
-        this.state = { movie_search: 'All', data: [] };
-        this.selectMovieShowing = this.selectMovieShowing.bind(this)
-    }
 
-    selectMovieShowing(item) {
-        this.setState({
-            movie_search: item,
-            data: this.props.fetchMovies(item).payload
-        })
-    }
-    componentDidMount() {
-        this.setState({
-            data: this.props.fetchMovies(this.state.movie_search).payload
-        })
-    }
     render() {
         return (
             <div>
-                <SliderDisplay selection={this.selectMovieShowing} data={this.state.data} />
+                {this.props.card ?
+                    <MoviePage /> :
+                    <SliderDisplay
+                        selection={this.props.pickSelection}
+                        data={this.props.data}
+                        card={this.props.click}
+                        selectedButton={this.props.selected}
+                        handleAlignment={this.props.handleAlignment}
+                    />
+                }
+
             </div >
         )
     }

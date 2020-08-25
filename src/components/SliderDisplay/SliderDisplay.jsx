@@ -32,11 +32,13 @@ const SliderDisplay = (props) => {
                                 <Title item={item} />
                                 {smallScreen ?
                                     <ButtonGroupMobile key={`mobile${item}`} clickSelection={props.selection} /> :
-                                    <MyButtonGroup item={item} selection={props.selection} />}
+                                    <MyButtonGroup item={item} alignment={props.selectedButton} handleAlignment={props.handleAlignment} />}
                             </ListItem>
                         </Grid>
                         <div className={classes.carrousel} key={`carousel${item}`} >
-                            <Carousel data={props.data} />
+                            <Carousel data={props.data}
+                                card={props.card}
+                            />
                         </div>
                     </div>
                 ))}

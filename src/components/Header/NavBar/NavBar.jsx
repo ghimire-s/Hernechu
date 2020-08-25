@@ -28,7 +28,7 @@ const NavBar = (props) => {
             </Typography>
         </Button>
     ))
-    const { history } = props;
+    const { history, full, selection } = props;
     const theme = useTheme();
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
@@ -40,6 +40,8 @@ const NavBar = (props) => {
 
     const handleMenuClick = (openUrl) => {
         history.push(openUrl);
+        if (openUrl === '/') { selection('All') };
+        full();
         setAnchorEl(null);
     };
 

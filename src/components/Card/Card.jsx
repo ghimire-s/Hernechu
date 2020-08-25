@@ -25,6 +25,7 @@ const MyCard = (props) => {
                     component="img"
                     image={props.image}
                     title="Live from space album cover"
+                    onClick={props.card}
                 >
                 </CardMedia>
             </CardActionArea>

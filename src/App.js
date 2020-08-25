@@ -1,14 +1,15 @@
-import React from 'react';
-import { Provider } from 'react-redux';
+import React, { useState, useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import Body from './components/Body/Body';
 import Header from './components/Header/Header';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { makeStyles, ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
-import Footer from './components/Footer/Footer'
+import Footer from './components/Footer/Footer';
+import { fetchMovies } from './actions/movieAction'
 
 import { Grid } from '@material-ui/core';
 
-import store from './store';
+
 
 const theme = createMuiTheme({
   palette: {
@@ -56,27 +57,54 @@ const useStyles = makeStyles(() => ({
   }
 }));
 
-function App() {
+const App = () => {
+  const [individualDisplay, setIndividualState] = useState(false);
+  const [data, setData] = useState([]);
+  const [alignment, setAlignment] = useState('');
+  const dispatch = useDispatch();
+  useEffect(() => {
+    setData(dispatch(fetchMovies('All')).payload);
+  }, []);
   const classes = useStyles();
-  return (
-    <Provider store={store}>
-      <ThemeProvider theme={theme}>
-        < Router>
-          <Grid container spacing={2} className={classes.grid}>
-            <Grid item xs={12}>
-              <Header />
-            </Grid>
-            <Grid item xs={12}>
-              <Body />
-            </Grid>
+  // const movies = useSelector(state => state.movies.items);
 
+  const selectMovieShowing = (item) => {
+    setData(dispatch(fetchMovies(item)).payload)
+  }
+  const individualCard = () => {
+    setIndividualState(true)
+  }
+  const fullDisplay = () => {
+    setIndividualState(false)
+  }
+  const handleAlignment = (event, newAlignment) => {
+    console.log(newAlignment)
+    setAlignment(newAlignment);
+    selectMovieShowing(newAlignment)
+  };
+  return (
+    < ThemeProvider theme={theme} >
+      <Router >
+        <Grid container spacing={2} className={classes.grid} >
+          <Grid item xs={12} >
+            <Header full={fullDisplay} selection={selectMovieShowing} />
           </Grid>
-        </ Router>
-        <Grid item xs={12}>
-          <Footer />
+          <Grid item xs={12} >
+            <Body
+              individualState={individualDisplay}
+              card={individualCard}
+              pickSelection={selectMovieShowing}
+              movieData={data}
+              selected={alignment}
+              handleAlignment={handleAlignment}
+            />
+          </Grid>
         </Grid>
-      </ThemeProvider>
-    </Provider>
+      </ Router>
+      <Grid item xs={12} >
+        <Footer />
+      </Grid>
+    </ThemeProvider >
   );
 }
 

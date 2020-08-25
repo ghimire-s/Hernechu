@@ -13,7 +13,7 @@ const useStyle = makeStyles((theme) => ({
 const StyledButton = makeStyles((theme) => ({
     root: {
         background: theme.palette.primary.main,
-        borderRadius: 3,
+        borderRadius: 20,
         border: 0,
         color: 'white',
         height: 48,
@@ -34,17 +34,12 @@ const StyledButton = makeStyles((theme) => ({
 const MyButtonGroup = (props) => {
     const classes = useStyle();
     const cla = StyledButton();
-    const [alignment, setAlignment] = React.useState('');
-    const handleAlignment = (event, newAlignment) => {
-        setAlignment(newAlignment);
-        props.selection(newAlignment)
-    };
     return (
         <div>
             <ToggleButtonGroup
-                value={alignment}
+                value={props.alignment}
                 exclusive
-                onChange={handleAlignment}
+                onChange={props.handleAlignment}
                 aria-label="movies showcase"
                 className={classes.button}
             >
