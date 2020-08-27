@@ -80,7 +80,7 @@ const Carousel = (props) => {
                     spacing={props.data ? 7 : 20}
                     className={classes.gridList}
                     cellHeight={smallScreen ? mobileScreen ? 200 : 270 : 350}
-                    cols={smallScreen ? mobileScreen ? 2.5 : 4.5 : props.data.length < 4.5 ? props.data.length : largeScreen ? 8.5 : 5.5}
+                    cols={smallScreen ? mobileScreen ? 2.5 : 4.5 : props.data.length < 3.5 ? props.data.length : largeScreen ? 6.5 : 4.5}
                     ref={movieScrollBox}
                 >
                     {props.data ? props.data.map((tile) => (
@@ -90,6 +90,7 @@ const Carousel = (props) => {
                                 key={tile.image}
                                 image={tile.image}
                                 card={props.card}
+                                name={tile.name}
                             />
                             <Typography
                                 key={tile.name}

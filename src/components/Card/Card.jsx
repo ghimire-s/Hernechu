@@ -7,7 +7,7 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        borderRadius: 8,
+        borderRadius: 12,
         [theme.breakpoints.down('xs')]: {
             maxWidth: '100px'
         },
@@ -19,22 +19,23 @@ const useStyles = makeStyles((theme) => ({
 const MyCard = (props) => {
     const classes = useStyles();
     return (
-        <Card elevation={3} className={classes.root} >
+        <Card elevation={7} className={classes.root} >
             <CardActionArea>
                 <CardMedia
                     component="img"
                     image={props.image}
-                    title="Live from space album cover"
-                    onClick={props.card}
+                    title={props.name}
+                    onClick={() => props.card(props.name)}
                 >
                 </CardMedia>
             </CardActionArea>
-        </Card>
+        </Card >
 
     )
 }
 MyCard.defaultProps = {
-    image: 'https://image.tmdb.org/t/p/w220_and_h330_face/d9pQHVVf2FbfY6ayPM7qseVLc5K.jpg'
+    image: 'https://image.tmdb.org/t/p/w220_and_h330_face/d9pQHVVf2FbfY6ayPM7qseVLc5K.jpg',
+    name: 'Mero'
 }
 
 export default MyCard;

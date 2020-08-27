@@ -11,19 +11,4 @@ describe("MoviePage", () => {
     it("should render MoviePage", () => {
         const wrapper = shallow(<Provider store={store}><MoviePage /></Provider >);
     });
-    it("should contain Grid element", () => {
-        const wrapper = mount(<Provider store={store}><MoviePage /></Provider >);
-        const grid = <Typography>
-            This is movie
-            </Typography>
-
-        expect(wrapper.contains(grid)).toEqual(true);
-    })
-    it("should contain Grid element", () => {
-        const wrapper = mount(<Provider store={store}><MoviePage /></Provider >);
-        const grid = <Typography>
-            This is Not a movie
-            </Typography>
-        expect(wrapper.contains(grid)).toEqual(false);
-    })
 });

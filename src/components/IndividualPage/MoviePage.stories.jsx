@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import MoviePage from './MoviePage';
+import { Provider } from 'react-redux';
+import store from '../../store';
 
 export default {
     title: 'Page/MoviePage',
-    component: MoviePage
+    component: MoviePage,
+    decorators: [(Story) => (<Provider store={store} ><Story /></Provider>)]
 }
 
 export const Default = () => <MoviePage />

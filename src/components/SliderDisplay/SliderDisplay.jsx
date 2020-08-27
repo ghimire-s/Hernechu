@@ -25,7 +25,7 @@ const SliderDisplay = (props) => {
     return (
         <div>
             <Grid container>
-                {['Movies', 'Songs', 'Trailers'].map((item) => (
+                {['Movies', 'Upcoming', 'Songs'].map((item) => (
                     <div key={`main${item}`} className={classes.row}>
                         <Grid item xs={12} key={`gridMain${item}`}>
                             <ListItem key={`listItem${item}`}>

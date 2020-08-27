@@ -11,13 +11,16 @@ class Home extends Component {
         return (
             <div>
                 {this.props.card ?
-                    <MoviePage /> :
+                    <MoviePage
+                        indiviualMovieName={this.props.indiviualMovieName}
+                    /> :
                     <SliderDisplay
                         selection={this.props.pickSelection}
                         data={this.props.data}
                         card={this.props.click}
                         selectedButton={this.props.selected}
                         handleAlignment={this.props.handleAlignment}
+
                     />
                 }
 

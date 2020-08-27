@@ -60,6 +60,7 @@ const useStyles = makeStyles(() => ({
 const App = () => {
   const [individualDisplay, setIndividualState] = useState(false);
   const [data, setData] = useState([]);
+  const [indiviualMovieName, setIndividualMovieName] = useState('');
   const [alignment, setAlignment] = useState('');
   const dispatch = useDispatch();
   useEffect(() => {
@@ -72,7 +73,8 @@ const App = () => {
     item === 'All' ? setAlignment('') : setAlignment(item);
     setData(dispatch(fetchMovies(item)).payload)
   }
-  const individualCard = () => {
+  const individualCard = (item) => {
+    setIndividualMovieName(item)
     setIndividualState(true)
   }
   const fullDisplay = () => {
@@ -93,6 +95,7 @@ const App = () => {
               movieData={data}
               selected={alignment}
               handleAlignment={selectMovieShowing}
+              indiviualMovieName={indiviualMovieName}
             />
           </Grid>
         </Grid>

@@ -1,4 +1,5 @@
-[{
+[
+    {
         "name": "Karkhana",
         "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/7w1QEDSLMmAgxQNQ1WlvLZADp3N.jpg",
         "year": "2017",
@@ -8,7 +9,8 @@
             "drama"
         ],
         "rating": "PG-13",
-        "actor": [{
+        "actor": [
+            {
                 "name": "Sushil Shrestha",
                 "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/dxScpyK7aGgIrOgopJn9M5ShzTr.jpg"
             },
@@ -37,9 +39,11 @@
                 "image": "https://image.tmdb.org/t/p/original/ySK3NIzPYA4aYsGhPd17me29TsJ.jpg"
             }
         ],
-        "streaming": [{
-            "youtube": "https://cdn2.iconfinder.com/data/icons/social-icons-color/512/youtube-512.png"
-        }],
+        "streaming": [
+            {
+                "youtube": "https://cdn2.iconfinder.com/data/icons/social-icons-color/512/youtube-512.png"
+            }
+        ],
         "songs": [
             "Dui Rupaiyaa",
             "Kutu Ma Kutu",
@@ -56,7 +60,8 @@
             "drama"
         ],
         "rating": "PG-13",
-        "actor": [{
+        "actor": [
+            {
                 "name": "Khagendra Lamichhane",
                 "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/n7F46qQ3MB8WoUFajUSrRyIhNlU.jpg"
             },
@@ -85,9 +90,11 @@
                 "image": "https://image.tmdb.org/t/p/original/ySK3NIzPYA4aYsGhPd17me29TsJ.jpg"
             }
         ],
-        "streaming": [{
-            "youtube": "https://cdn2.iconfinder.com/data/icons/social-icons-color/512/youtube-512.png"
-        }],
+        "streaming": [
+            {
+                "youtube": "https://cdn2.iconfinder.com/data/icons/social-icons-color/512/youtube-512.png"
+            }
+        ],
         "songs": [
             "Dui Rupaiyaa",
             "Kutu Ma Kutu",
@@ -104,7 +111,8 @@
             "drama"
         ],
         "rating": "PG-13",
-        "actor": [{
+        "actor": [
+            {
                 "name": "Reecha Sharma",
                 "image": "https://image.tmdb.org/t/p/original/1f8Y1jAxZdWPPEbfmlrK48iIqFl.jpg"
             },
@@ -133,9 +141,11 @@
                 "image": "https://image.tmdb.org/t/p/original/ySK3NIzPYA4aYsGhPd17me29TsJ.jpg"
             }
         ],
-        "streaming": [{
-            "youtube": "https://cdn2.iconfinder.com/data/icons/social-icons-color/512/youtube-512.png"
-        }],
+        "streaming": [
+            {
+                "youtube": "https://cdn2.iconfinder.com/data/icons/social-icons-color/512/youtube-512.png"
+            }
+        ],
         "songs": [
             "Dui Rupaiyaa",
             "Kutu Ma Kutu",
@@ -152,7 +162,8 @@
             "Horror"
         ],
         "rating": "PG-13",
-        "actor": [{
+        "actor": [
+            {
                 "name": "Reecha Sharma",
                 "image": "https://image.tmdb.org/t/p/original/1f8Y1jAxZdWPPEbfmlrK48iIqFl.jpg"
             },
@@ -181,9 +192,11 @@
                 "image": "https://image.tmdb.org/t/p/original/ySK3NIzPYA4aYsGhPd17me29TsJ.jpg"
             }
         ],
-        "streaming": [{
-            "youtube": "https://cdn2.iconfinder.com/data/icons/social-icons-color/512/youtube-512.png"
-        }],
+        "streaming": [
+            {
+                "youtube": "https://cdn2.iconfinder.com/data/icons/social-icons-color/512/youtube-512.png"
+            }
+        ],
         "songs": [
             "Dui Rupaiyaa",
             "Kutu Ma Kutu",
@@ -198,10 +211,12 @@
         "youtube": "",
         "genre": [
             "action",
-            "comedy"
+            "comedy",
+            "fantasy"
         ],
         "rating": "PG-13",
-        "actor": [{
+        "actor": [
+            {
                 "name": "Reecha Sharma",
                 "image": "https://image.tmdb.org/t/p/original/1f8Y1jAxZdWPPEbfmlrK48iIqFl.jpg"
             },
@@ -230,7 +245,8 @@
                 "image": "https://image.tmdb.org/t/p/original/ySK3NIzPYA4aYsGhPd17me29TsJ.jpg"
             }
         ],
-        "streaming": [{
+        "streaming": [
+            {
                 "prime": "https://is3-ssl.mzstatic.com/image/thumb/Purple114/v4/48/27/ad/4827ad2f-084b-2760-3d6d-5b26238decc0/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/1200x630wa.png"
             },
             {
@@ -254,7 +270,8 @@
             "Adventure"
         ],
         "rating": "PG-13",
-        "actor": [{
+        "actor": [
+            {
                 "name": "Reecha Sharma",
                 "image": "https://image.tmdb.org/t/p/original/1f8Y1jAxZdWPPEbfmlrK48iIqFl.jpg"
             },
@@ -283,7 +300,8 @@
                 "image": "https://image.tmdb.org/t/p/original/ySK3NIzPYA4aYsGhPd17me29TsJ.jpg"
             }
         ],
-        "streaming": [{
+        "streaming": [
+            {
                 "prime": "https://is3-ssl.mzstatic.com/image/thumb/Purple114/v4/48/27/ad/4827ad2f-084b-2760-3d6d-5b26238decc0/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/1200x630wa.png"
             },
             {
@@ -308,7 +326,8 @@
             "Drama"
         ],
         "rating": "PG-13",
-        "actor": [{
+        "actor": [
+            {
                 "name": "Reecha Sharma",
                 "image": "https://image.tmdb.org/t/p/original/1f8Y1jAxZdWPPEbfmlrK48iIqFl.jpg"
             },
@@ -337,7 +356,8 @@
                 "image": "https://image.tmdb.org/t/p/original/ySK3NIzPYA4aYsGhPd17me29TsJ.jpg"
             }
         ],
-        "streaming": [{
+        "streaming": [
+            {
                 "prime": "https://is3-ssl.mzstatic.com/image/thumb/Purple114/v4/48/27/ad/4827ad2f-084b-2760-3d6d-5b26238decc0/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/1200x630wa.png"
             },
             {
@@ -361,7 +381,8 @@
             "drama"
         ],
         "rating": "PG-13",
-        "actor": [{
+        "actor": [
+            {
                 "name": "Reecha Sharma",
                 "image": "https://image.tmdb.org/t/p/original/1f8Y1jAxZdWPPEbfmlrK48iIqFl.jpg"
             },
@@ -390,7 +411,8 @@
                 "image": "https://image.tmdb.org/t/p/original/ySK3NIzPYA4aYsGhPd17me29TsJ.jpg"
             }
         ],
-        "streaming": [{
+        "streaming": [
+            {
                 "prime": "https://is3-ssl.mzstatic.com/image/thumb/Purple114/v4/48/27/ad/4827ad2f-084b-2760-3d6d-5b26238decc0/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/1200x630wa.png"
             },
             {
@@ -415,7 +437,8 @@
             "Family"
         ],
         "rating": "PG-13",
-        "actor": [{
+        "actor": [
+            {
                 "name": "Reecha Sharma",
                 "image": "https://image.tmdb.org/t/p/original/1f8Y1jAxZdWPPEbfmlrK48iIqFl.jpg"
             },
@@ -444,7 +467,8 @@
                 "image": "https://image.tmdb.org/t/p/original/ySK3NIzPYA4aYsGhPd17me29TsJ.jpg"
             }
         ],
-        "streaming": [{
+        "streaming": [
+            {
                 "prime": "https://is3-ssl.mzstatic.com/image/thumb/Purple114/v4/48/27/ad/4827ad2f-084b-2760-3d6d-5b26238decc0/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/1200x630wa.png"
             },
             {
@@ -468,7 +492,8 @@
             "comedy"
         ],
         "rating": "PG-13",
-        "actor": [{
+        "actor": [
+            {
                 "name": "Reecha Sharma",
                 "image": "https://image.tmdb.org/t/p/original/1f8Y1jAxZdWPPEbfmlrK48iIqFl.jpg"
             },
@@ -497,7 +522,8 @@
                 "image": "https://image.tmdb.org/t/p/original/ySK3NIzPYA4aYsGhPd17me29TsJ.jpg"
             }
         ],
-        "streaming": [{
+        "streaming": [
+            {
                 "prime": "https://is3-ssl.mzstatic.com/image/thumb/Purple114/v4/48/27/ad/4827ad2f-084b-2760-3d6d-5b26238decc0/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/1200x630wa.png"
             },
             {

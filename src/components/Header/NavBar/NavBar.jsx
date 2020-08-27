@@ -88,7 +88,7 @@ const NavBar = (props) => {
 
 
 NavBar.defaultProps = {
-    navItem: ['Home', 'Trailers', 'Songs', 'About']
+    navItem: ['Home', 'Upcoming', 'Songs', 'About']
 }
 
 export default withRouter(NavBar);

@@ -7,9 +7,18 @@ import Home from "../Home/Home";
 import Songs from "../Songs/Songs";
 import Trailers from '../Trailers/Trailers';
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
     root: {
         minHeight: '100%',
+        [theme.breakpoints.between('lg', 'xl')]: {
+            padding: '0 15em'
+        },
+        [theme.breakpoints.between('md', 'lg')]: {
+            padding: '0 5em'
+        },
+        [theme.breakpoints.between('sm', 'md')]: {
+            padding: '0 3em'
+        }
     }
 }));
 
@@ -35,7 +44,9 @@ const Body = (props) => {
                         click={props.card}
                         pickSelection={props.pickSelection}
                         selected={props.selected}
-                        handleAlignment={props.handleAlignment} />
+                        handleAlignment={props.handleAlignment}
+                        indiviualMovieName={props.indiviualMovieName}
+                    />
                 </Route>
             </Switch >
         </div >
