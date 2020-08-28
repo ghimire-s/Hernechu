@@ -1,7 +1,8 @@
 import React from 'react';
-import { Typography, Card, CardMedia, CardActionArea, GridList, GridListTile } from '@material-ui/core';
+import { Typography, Card, CardMedia, CardActionArea, GridList, GridListTile, Paper } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import Skeleton from '@material-ui/lab/Skeleton';
+import PersonIcon from '@material-ui/icons/Person';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -34,6 +35,16 @@ const useStyles = makeStyles((theme) => ({
         textAlign: 'center',
         marginLeft: theme.spacing(-2),
         overflow: 'hidden',
+    },
+    paper: {
+        maxHeight: '600px',
+        maxWidth: '900px',
+        fontSize: '130px',
+        backgroundColor: theme.palette.background.default,
+    },
+    icon: {
+        fontSize: '100px',
+        color: theme.palette.primary.main
     }
 }))
 
@@ -43,6 +54,9 @@ const MovieCastnCrew = (props) => {
     </div>
     const { movie } = props;
     const classes = useStyles();
+    const noImage = <Paper className={classes.paper}>
+        <PersonIcon className={classes.icon} />
+    </Paper>
     return (
         <div className={classes.root}>
             <Typography variant="h6">
@@ -59,12 +73,14 @@ const MovieCastnCrew = (props) => {
                             <GridListTile key={index} >
                                 <Card elevation={3} className={classes.card} key={`card${index}`}>
                                     <CardActionArea key={index}>
-                                        <CardMedia key={item}
-                                            component="img"
-                                            image={item.image}
-                                            title={item.name}
-                                        >
-                                        </CardMedia>
+                                        {item.image === "" ?
+                                            noImage :
+                                            <CardMedia key={item}
+                                                component="img"
+                                                image={item.image}
+                                                title={item.name}
+                                            >
+                                            </CardMedia>}
                                     </CardActionArea>
                                 </Card>
                                 <Typography variant="body2"

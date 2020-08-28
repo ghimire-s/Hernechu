@@ -22,6 +22,7 @@ const useStyles = makeStyles((theme) => ({
     },
     selected: {},
     paper: {
+        borderRadius: '12px',
         marginBottom: theme.spacing(1),
         '&:hover': {
             backgroundColor: theme.palette.secondary.main,
