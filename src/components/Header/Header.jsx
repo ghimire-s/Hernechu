@@ -4,6 +4,7 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import NavBar from './NavBar/NavBar';
 import Logo from './Logo/Logo';
+import { Switch, FormControlLabel } from '@material-ui/core';
 import { navBar, webSiteName } from '../../website';
 
 
@@ -20,7 +21,11 @@ const Header = (props) => {
             <AppBar position="static" >
                 <Toolbar>
                     <Logo websiteName={webSiteName} />
-                    <NavBar navItem={navBar} full={props.full} selection={props.selection}/>
+                    <FormControlLabel
+                        control={<Switch checked={props.darkTheme} onChange={props.handleChangeTheme} name="checkedA" />}
+                        label="Dark"
+                    />
+                    <NavBar navItem={navBar} full={props.full} selection={props.selection} />
                 </Toolbar>
             </AppBar>
         </div>
